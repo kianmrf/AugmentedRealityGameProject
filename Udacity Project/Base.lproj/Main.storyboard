@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Udacity_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ia6-NQ-kyf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFi-Xd-h2x">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="g3V-2o-zU2"/>
+                                </connections>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qz2-3T-N3U">
+                                <rect key="frame" x="241" y="592" width="100" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Throw Ball"/>
+                                <connections>
+                                    <action selector="throwBall:" destination="BV1-FR-VrT" eventType="touchUpInside" id="O16-Dt-1Kg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-f9-VtU">
+                                <rect key="frame" x="36" y="592" width="65" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Magic!"/>
+                                <connections>
+                                    <action selector="showMagic:" destination="BV1-FR-VrT" eventType="touchUpInside" id="YTL-Lw-95y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hv7-BQ-e7M" firstAttribute="bottom" secondItem="qz2-3T-N3U" secondAttribute="bottom" constant="36" id="7Fd-QL-h1N"/>
+                            <constraint firstItem="dzP-f9-VtU" firstAttribute="leading" secondItem="hv7-BQ-e7M" secondAttribute="leading" constant="36" id="G9P-2z-oxU"/>
+                            <constraint firstItem="hv7-BQ-e7M" firstAttribute="bottom" secondItem="dzP-f9-VtU" secondAttribute="bottom" constant="36" id="e1K-T5-rcw"/>
+                            <constraint firstAttribute="bottom" secondItem="uFi-Xd-h2x" secondAttribute="bottom" id="fNq-Yo-YqL"/>
+                            <constraint firstItem="hv7-BQ-e7M" firstAttribute="trailing" secondItem="qz2-3T-N3U" secondAttribute="trailing" constant="34" id="iBG-il-dj8"/>
+                            <constraint firstItem="uFi-Xd-h2x" firstAttribute="trailing" secondItem="hv7-BQ-e7M" secondAttribute="trailing" id="kNU-gf-yjp"/>
+                            <constraint firstItem="uFi-Xd-h2x" firstAttribute="top" secondItem="Ia6-NQ-kyf" secondAttribute="top" id="v1f-92-oMM"/>
+                            <constraint firstItem="uFi-Xd-h2x" firstAttribute="leading" secondItem="hv7-BQ-e7M" secondAttribute="leading" id="wMe-Ee-KdZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hv7-BQ-e7M"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="uFi-Xd-h2x" id="obW-x3-gY2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.512315270935964"/>
+        </scene>
+    </scenes>
+</document>
